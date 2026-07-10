@@ -1,0 +1,8 @@
+# Generated analysis outputs -- regenerable by running R/voice.R, not source
+*.rds
+*.RData
+examples/*/ldavis_*/
+examples/*/topic_reading/
+
+# OS cruft
+.DS_Store
