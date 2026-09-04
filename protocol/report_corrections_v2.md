@@ -17,8 +17,23 @@ signing one coalition submission, not the number of documents. And the "Stop AI"
 petition cluster referred to elsewhere does not exist as described: there are two
 Stop AI submissions and they share about a third of their vocabulary.
 
-With stopwords removed and the matrix tf-idf weighted, eight documents in three
-groups sit above the 0.85 threshold.
+With stopwords removed and the matrix tf-idf weighted, the detector prints
+**8 pairs** above the 0.85 threshold. Those 8 pairs involve **8 distinct
+documents** in **3 groups** — the two counts coinciding by accident, which is
+the kind of ambiguity that produced "thirteen" in the first place. Keep the
+three numbers apart:
+
+| | Documents | Pairs |
+|---|---|---|
+| AI-safety coalition | 1412, 1425, 1592, 1619 | 6 |
+| Asociación Chilena de IA | 505, 60 | 1 |
+| Partial overlap (0.888) | 1087, 1062 | 1 |
+| **Total** | **8 documents** | **8 pairs** |
+
+A third number applies if you decide to deduplicate: keeping one document per
+group removes **4** (n = 375), or **5** if the 0.888 pair is also treated as
+duplicate (n = 374). The effect reported below was measured both ways and is
+the same.
 
 **Replacement text:**
 
