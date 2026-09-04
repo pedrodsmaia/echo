@@ -49,23 +49,32 @@ groups sit above the 0.85 threshold.
 > We measured the effect. Keeping one copy of each group and dropping the
 > redundant filings moves no theme by more than 0.11 percentage points, and
 > changes the ordering of the themes not at all — with one exception. The
-> exception is the theme these submissions are themselves about: frontier AI
-> safety, incident reporting and voluntary coordination, which falls from 3.1%
-> to 2.3%, a reduction of roughly a quarter. The four coalition documents alone
-> account for a third of that theme's measured size.
+> exception is the theme these submissions are themselves about — frontier AI
+> and existential risk — which falls from 3.1% to 2.3%, a reduction of roughly
+> a quarter. The four coalition documents alone account for a third of that
+> theme's measured size.
 >
 > This cuts against one of our own findings rather than for it. The contraction
-> of frontier-safety language between civil society's submissions and the
-> official programme is somewhat smaller than the headline comparison suggests,
-> because the civil society side of it is inflated by repeat filing. No other
-> finding in this report is affected.
+> of frontier-risk language between civil society's submissions and the official
+> programme is somewhat smaller than the headline comparison suggests, because
+> the civil society side of that comparison is inflated by repeat filing. No
+> other finding in this report is affected.
 
-**Before publishing, confirm one mapping.** The affected theme was identified in
-a refitted model, where it carries the words *frontier, incident, safety,
-coordination, voluntary, autonomous, capable*. Check which of the report's
-labelled themes it corresponds to — most likely "Frontier AI & existential risk"
-or a neighbour of it — and use that label in the replacement text, so the
-passage and Table 1 agree.
+**The affected theme is "Frontier AI & existential risk."** It was identified in
+a refitted model, so confirm the correspondence against your own before
+publishing, but the identification is not in doubt: after the four coalition
+filings, the documents loading most heavily on it are AI Safety Asia, CeSIA,
+Concordia AI, PauseAI Global, the Center for AI Risk Management & Alignment,
+MIRI and CAIDP — the same population the report describes under that theme. Its
+distinctive words are *capable, frontier, incident, safety, coordination,
+channel, voluntary, autonomous, member, catastrophic, rapid*.
+
+Note for anyone reading the coalition submission itself: it never uses the word
+"frontier." It writes about cross-border incident communication and response —
+"cross-border" meaning risks that cross jurisdictions, not border control — and
+about risks from advanced AI systems. The frontier vocabulary in this theme
+comes from the other organizations loading on it. The two registers are the same
+concern expressed differently, which is why the model groups them.
 
 **Table 4 needs rebuilding** on the same basis: eight documents in three groups,
 not thirteen, and the per-theme differences above.
