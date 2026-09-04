@@ -1,0 +1,39 @@
+cff-version: 1.2.0
+title: "Echo Audit: a methodology for measuring whether civil society input is reflected in multilateral governance outcomes"
+message: "If you use this methodology or code, please cite it."
+type: software
+authors:
+  - given-names: Pedro
+    family-names: Maia
+    affiliation: SKEMA Business School
+version: "2.0.0"
+date-released: 2026-09-09
+license: MIT
+abstract: >-
+  Echo Audit is a three-phase methodology and R toolkit for measuring whether
+  civil society input into a multilateral governance process is reflected in
+  that process's agenda and outputs, or recorded and set aside. It extends
+  Nelson's computational grounded theory framework with an accountability
+  phase: the topic model discovered from civil society's own words is frozen
+  and used as a fixed instrument to score the institution's own documents, so
+  that all collections are measured on one comparable scale. Piloted on the
+  UN's first Global Dialogue on AI Governance, Geneva, July 2026.
+keywords:
+  - AI governance
+  - civil society participation
+  - multilateral governance
+  - computational grounded theory
+  - structural topic model
+  - accountability
+references:
+  - type: article
+    authors:
+      - given-names: Laura K.
+        family-names: Nelson
+    title: "Computational Grounded Theory: A Methodological Framework"
+    journal: "Sociological Methods & Research"
+    volume: 49
+    issue: 1
+    start: 3
+    end: 42
+    year: 2020

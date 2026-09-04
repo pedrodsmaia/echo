@@ -108,10 +108,19 @@ run_echo_voice <- function(csv_path,
   cat("\nDocuments (English only):", nrow(df), "\n")
 
   # --- near-duplicate detection ---
+  # Stopwords are removed and the matrix is tf-idf weighted BEFORE the cosine.
+  # Without this the threshold measures genre rather than duplication: in a
+  # corpus of responses to the same structured questionnaire, every document
+  # shares the form's vocabulary. On the pilot corpus (379 docs, 71,631 pairs)
+  # the raw matrix put 10,768 pairs (15% of all pairs) above 0.85, against 8
+  # after tf-idf -- while the 7 genuinely near-identical pairs were found by
+  # both. See protocol Step 2.2.
   dfm_check <- df$text_string %>%
     tokens(remove_punct = TRUE, remove_numbers = TRUE) %>%
     tokens_tolower() %>%
-    dfm()
+    tokens_remove(stopwords("en")) %>%
+    dfm() %>%
+    dfm_tfidf()
   sim <- textstat_simil(dfm_check, method = "cosine")
   sim_df <- as.data.frame(sim) %>%
     filter(document1 != document2, cosine > near_dup_threshold) %>%
