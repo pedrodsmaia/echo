@@ -65,7 +65,7 @@ the same.
 > redundant filings moves no theme by more than 0.11 percentage points, and
 > changes the ordering of the themes not at all — with one exception. The
 > exception is the theme these submissions are themselves about — frontier AI
-> and existential risk — which falls from 3.1% to 2.3%, a reduction of roughly
+> and existential risk — which falls from [A]% to [B]%, a reduction of roughly
 > a quarter. The four coalition documents alone account for a third of that
 > theme's measured size.
 >
@@ -91,8 +91,48 @@ about risks from advanced AI systems. The frontier vocabulary in this theme
 comes from the other organizations loading on it. The two registers are the same
 concern expressed differently, which is why the model groups them.
 
+### Fill [A] and [B] from your own model, not from this note
+
+[A] is the theme's published share (4.2% in the report as it stands). [B] must
+be computed on the model the report was built from — the figures quoted while
+this correction was being prepared, 3.1% falling to 2.3%, come from a refitted
+model and do not match the published table. It is one line, not a refit:
+
+```r
+ids  <- as.character(voice$meta$.doc_id)
+drop <- which(ids %in% c("1425", "1592", "1619", "60"))   # keep one per group
+round(colMeans(final$chosen_model$theta[-drop, ]) * 100, 2)
+```
+
+Read [B] off the frontier theme's column. Add `"1062"` to `drop` if you also
+treat the 0.888 pair as duplicate; on the refitted model that changed nothing
+beyond the second decimal.
+
 **Table 4 needs rebuilding** on the same basis: eight documents in three groups,
 not thirteen, and the per-theme differences above.
+
+---
+
+## 3. DEFERRED to the final report — report both numbers where the claim is about breadth
+
+**Not for this version.** Recorded here so it is not lost.
+
+The report defines a theme's percentage as the share of *text*, not the share of
+organizations, and under that definition every filing counts and the published
+figure is correct. But the report also uses these percentages for a different
+claim — that frontier risk "sits eleventh", read as evidence about what civil
+society prioritises. That is a claim about breadth of concern, which the
+definition does not license once one argument is filed four times.
+
+For the final report: give this one theme both figures side by side — all
+filings, and one copy per group — and say which supports which claim. The first
+answers "how much of the text"; the second answers "how widely held". Put the
+caveat in §6.2 beside the "eleventh" sentence, not only in "Checking the
+analysis", because percentages travel without their methods section.
+
+This keeps the information complete and lets a reader reverse the judgement,
+which is the practical test. It costs one extra column on one theme and two
+sentences; it does not require recomputing the report.
 
 ---
 
