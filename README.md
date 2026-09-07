@@ -1,5 +1,7 @@
 # Echo Audit
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22643933.svg)](https://doi.org/10.5281/zenodo.22643933)
+
 A methodology and toolkit for measuring whether civil society input into a
 multilateral governance process is **reflected** in that process's agenda and
 outputs — or recorded and set aside.
@@ -157,4 +159,14 @@ author. See [LICENSE](LICENSE).
 
 ## Citation
 
-See [CITATION.cff](CITATION.cff).
+> dos Santos Maia, Pedro (2026). *Echo Audit: a methodology and toolkit for
+> measuring whether civil society input is reflected in multilateral governance
+> outcomes* (v2.0.0). Zenodo.
+> [doi:10.5281/zenodo.22643933](https://doi.org/10.5281/zenodo.22643933)
+
+The DOI above is the concept DOI and always resolves to the latest version. To
+cite this release specifically, use
+[10.5281/zenodo.22643934](https://doi.org/10.5281/zenodo.22643934).
+
+Please cite Nelson (2020) alongside it — see [Built on](#built-on).
+Machine-readable metadata is in [CITATION.cff](CITATION.cff).

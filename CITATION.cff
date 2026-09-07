@@ -8,8 +8,17 @@ authors:
     affiliation: SKEMA Business School
     orcid: "https://orcid.org/0000-0001-6933-3274"
 version: "2.0.0"
-date-released: 2026-09-09
+date-released: 2026-09-07
 license: MIT
+doi: 10.5281/zenodo.22643933
+repository-code: "https://github.com/pedrodsmaia/echo"
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.22643933
+    description: Concept DOI, always resolving to the latest version
+  - type: doi
+    value: 10.5281/zenodo.22643934
+    description: DOI for release v2.0.0
 abstract: >-
   Echo Audit is a three-phase methodology and R toolkit for measuring whether
   civil society input into a multilateral governance process is reflected in
