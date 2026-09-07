@@ -39,12 +39,30 @@ comparable. Each theme is finally classified as **amplified**, **diluted**,
 
 ## Install
 
+The quick path — installs current versions of what the code needs:
+
 ```bash
 Rscript setup.R
 ```
 
-Verified on R 4.6.1 with stm 1.3.8, quanteda 4.5.0, tm 0.7.18, SnowballC 0.7.1,
-quanteda.textstats 0.97.2, cld2, LDAvis 0.3.2.
+The exact path — installs the 65 packages at the versions this analysis was
+run with, from `renv.lock`:
+
+```r
+install.packages("renv")
+renv::restore()
+```
+
+Use the second one if your numbers do not match `expected_output.txt`. Topic
+models are deterministic given the same data, seed and package versions, so a
+mismatch means a version differs — most likely the tokeniser (`quanteda`) or
+the stemmer (`SnowballC`), either of which changes the vocabulary and therefore
+the model. Verified on R 4.6.1 with stm 1.3.8, quanteda 4.5.0, tm 0.7.18,
+SnowballC 0.7.1, quanteda.textstats 0.97.2, cld2 1.2.6, LDAvis 0.3.2.
+
+`renv.lock` records versions; it does not activate renv for the project, so
+`setup.R` stays the simple route and nothing is forced on anyone who just wants
+to run the pipeline.
 
 `tm` and `SnowballC` are not called anywhere in this repository, but
 `stm::textProcessor()` requires both. Installing only the packages this code
