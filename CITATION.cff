@@ -4,8 +4,9 @@ message: "If you use this methodology or code, please cite it."
 type: software
 authors:
   - given-names: Pedro
-    family-names: Maia
+    family-names: dos Santos Maia
     affiliation: SKEMA Business School
+    orcid: "https://orcid.org/0000-0001-6933-3274"
 version: "2.0.0"
 date-released: 2026-09-09
 license: MIT

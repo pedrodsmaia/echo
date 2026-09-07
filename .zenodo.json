@@ -4,8 +4,9 @@
   "description": "<p>Echo Audit is a three-phase methodology and R toolkit for measuring whether civil society input into a multilateral governance process is reflected in that process's agenda and outputs, or recorded and set aside.</p><p>It extends Nelson's computational grounded theory framework (Sociological Methods &amp; Research 49(1):3-42) with an accountability phase: the topic model discovered from civil society's own words is frozen and used as a fixed instrument to score the institution's own documents, so that all collections are measured on one comparable scale. Each theme is then classified as amplified, diluted, engulfed or excluded.</p><p>Piloted on the United Nations' first Global Dialogue on AI Governance (Geneva, 6-7 July 2026), analysing 379 civil society written submissions, 55 side-event concept notes and the 7 official session notes. The repository includes the protocol, the R implementation of all three phases, and the pilot end to end with its data and expected output.</p><p>Code is MIT licensed; the protocol and methodology documents are CC BY 4.0. The pilot corpora are public United Nations documents, redistributed for verification.</p>",
   "creators": [
     {
-      "name": "Maia, Pedro",
-      "affiliation": "SKEMA Business School"
+      "name": "dos Santos Maia, Pedro",
+      "affiliation": "SKEMA Business School",
+      "orcid": "0000-0001-6933-3274"
     }
   ],
   "license": "MIT",
