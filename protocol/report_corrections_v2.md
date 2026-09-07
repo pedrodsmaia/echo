@@ -61,13 +61,14 @@ the same.
 > quietly weight the analysis toward the best-resourced submitters — the
 > opposite of what this report is trying to see.
 >
-> We measured the effect. Keeping one copy of each group and dropping the
-> redundant filings moves no theme by more than 0.11 percentage points, and
-> changes the ordering of the themes not at all — with one exception. The
-> exception is the theme these submissions are themselves about — frontier AI
-> and existential risk — which falls from [A]% to [B]%, a reduction of roughly
-> a quarter. The four coalition documents alone account for a third of that
-> theme's measured size.
+> We measured the effect on a refit of the same pipeline, the model behind the
+> figures reported here not having been retained. Keeping one copy of each
+> group and dropping the redundant filings moves no theme by more than about a
+> tenth of a percentage point, and changes the ordering of the themes not at
+> all — with one exception. The exception is the theme these submissions are
+> themselves about, frontier AI and existential risk, which loses roughly a
+> quarter of its size; the four coalition documents alone account for about a
+> third of it.
 >
 > This cuts against one of our own findings rather than for it. The contraction
 > of frontier-risk language between civil society's submissions and the official
@@ -91,22 +92,31 @@ about risks from advanced AI systems. The frontier vocabulary in this theme
 comes from the other organizations loading on it. The two registers are the same
 concern expressed differently, which is why the model groups them.
 
-### Fill [A] and [B] from your own model, not from this note
+### Why this correction gives a proportion and not two percentages
 
-[A] is the theme's published share (4.2% in the report as it stands). [B] must
-be computed on the model the report was built from — the figures quoted while
-this correction was being prepared, 3.1% falling to 2.3%, come from a refitted
-model and do not match the published table. It is one line, not a refit:
+The fitted model behind the published figures was not saved, and is not on disk
+anywhere. It cannot be reloaded, so the deduplicated share cannot be computed
+against it.
 
-```r
-ids  <- as.character(voice$meta$.doc_id)
-drop <- which(ids %in% c("1425", "1592", "1619", "60"))   # keep one per group
-round(colMeans(final$chosen_model$theta[-drop, ]) * 100, 2)
-```
+Refitting the pipeline today reproduces the analysis in shape but not in exact
+values — the themes correspond one to one and the neighbouring sizes are close
+(environment 4.5% against 4.48% refitted, data rights 10.9% against 10.81%),
+but the frontier theme comes out at 3.07% rather than 4.2%. The most likely
+cause is drift in package versions between the original run and now, which is
+what `renv.lock` exists to prevent from here on.
 
-Read [B] off the frontier theme's column. Add `"1062"` to `drop` if you also
-treat the 0.888 pair as duplicate; on the refitted model that changed nothing
-beyond the second decimal.
+What transfers between the two models is the proportion, not the level: the
+theme loses about a quarter of whatever size it has, and the coalition's four
+filings supply about a third of it. The replacement text above is written in
+those terms deliberately.
+
+**The identification of the theme is sound**, and was checked rather than
+assumed: in the refit every AI-safety organization loads on the same topic —
+CeSIA 0.55, AI Safety Asia 0.58, Concordia AI 0.46, PauseAI 0.45, the Center
+for AI Risk Management & Alignment 0.43, MIRI 0.33, and the coalition filings
+0.96 — while Stop AI loads on a separate topic whose vocabulary is *treaty,
+legally-binding*, matching the report's "Calls to halt AI development" at a
+comparable size (2.52% refitted against 2.8% published).
 
 **Table 4 needs rebuilding** on the same basis: eight documents in three groups,
 not thirteen, and the per-theme differences above.
@@ -124,8 +134,16 @@ claim — that frontier risk "sits eleventh", read as evidence about what civil
 society prioritises. That is a claim about breadth of concern, which the
 definition does not license once one argument is filed four times.
 
-For the final report: give this one theme both figures side by side — all
-filings, and one copy per group — and say which supports which claim. The first
+For the final report, and prerequisite to the above: refit once deliberately,
+save the fitted model alongside the data, and regenerate every figure in the
+report from it. Until that is done the report cannot be verified by anyone,
+including its author, because the model its numbers came from no longer exists.
+The repository now makes this automatic — the pipeline is deterministic given
+the data, the seed and the versions in `renv.lock` — but the published figures
+predate that.
+
+Then give this one theme both figures side by side — all filings, and one copy
+per group — and say which supports which claim. The first
 answers "how much of the text"; the second answers "how widely held". Put the
 caveat in §6.2 beside the "eleventh" sentence, not only in "Checking the
 analysis", because percentages travel without their methods section.
