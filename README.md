@@ -17,11 +17,12 @@ developers were reduced, softened or absorbed.
 | **Voice** | What did participants actually say, independent of what happens to it? | `R/voice.R` |
 | **Echo** | How much of that content is present in what the institution produced? | `R/echo.R` |
 
-Voice discovers the themes from civil society's own words. The model is then
-**frozen** and used as a fixed instrument to measure the institution's own
-documents, so all collections are scored on one scale and are directly
-comparable. Each theme is finally classified as **amplified**, **diluted**,
-**engulfed** or **excluded**.
+Voice discovers the themes from civil society's own words, following the
+computational grounded theory framework of **Laura K. Nelson** (see
+[Built on](#built-on) below). The model is then **frozen** and used as a fixed
+instrument to measure the institution's own documents, so all collections are
+scored on one scale and are directly comparable. Each theme is finally
+classified as **amplified**, **diluted**, **engulfed** or **excluded**.
 
 ## What's here
 
@@ -126,6 +127,26 @@ documents tell you what happened to it. For any exclusion claim, run
 `echo_lexical_check()` first — with a small institutional corpus a near-zero
 share is weakly powered, while a defining term that occurs nowhere is direct
 evidence.
+
+## Built on
+
+The Voice phase is an implementation of the framework set out in:
+
+> **Nelson, Laura K.** (2020). "Computational Grounded Theory: A Methodological
+> Framework." *Sociological Methods & Research*, 49(1), 3–42.
+> [doi:10.1177/0049124117729703](https://doi.org/10.1177/0049124117729703)
+
+That article formalises the three movements this toolkit's Phase 2 follows —
+pattern detection by machine, refinement through guided close reading, and
+confirmation against the whole corpus — and it is the source of the two
+model-selection failure signs used to choose K. The insistence that model
+selection stay a human judgement rather than a maximised statistic is Nelson's
+argument, not an implementation convenience.
+
+**Signal** and **Echo** are extensions built on top of that framework to answer
+an accountability question it does not address: not only what a body of text
+says, but whether what it says is reflected in what an institution subsequently
+produced. Anyone citing this work should cite Nelson's article alongside it.
 
 ## Licence
 
