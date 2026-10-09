@@ -37,6 +37,9 @@ classified as **amplified**, **diluted**, **engulfed** or **excluded**.
   `echo_lexical_check()`.
 - **`examples/geneva_2026/`** — the pilot, end to end, with its data and its
   expected output. Run this first to confirm your install reproduces it.
+- **`guide/Did_They_Hear_Us.pdf`** — a practitioner guide for civil society
+  organisations, setting out the audit at three levels of technical capacity so
+  that it can be used without writing code.
 - **`Echo_Audit_Presentation.pptx`** — a 12-slide introduction for a
   non-technical audience.
 
@@ -149,6 +152,15 @@ argument, not an implementation convenience.
 an accountability question it does not address: not only what a body of text
 says, but whether what it says is reflected in what an institution subsequently
 produced. Anyone citing this work should cite Nelson's article alongside it.
+
+## Acknowledgements
+
+The practitioner guide *Did They Hear Us?* was produced as an output of the
+Globethics Emerging Leaders in Ethical AI Governance Fellowship 2026.
+Globethics' *Pathways to Inclusion* survey of 85 civil society organisations
+informed its structure, and in particular the decision to set out the audit at
+three levels of technical capacity rather than assume access to statistical
+software.
 
 ## Licence
 
